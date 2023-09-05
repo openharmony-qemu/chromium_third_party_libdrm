@@ -1,63 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!-- Copyright (c) 2021 Huawei Device Co., Ltd.
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
-
-    This is the configuration file template for OpenHarmony OSS Audit Tool, please copy it to your
-project root dir and modify it refer to OpenHarmony/tools_oat/README.
-    All configurations in this file will be merged to OAT-Default.xml, if you have any questions or
-concerns, please create issue in OpenHarmony/tools_oat and @jalenchen or chenyaxun.
-
-    licensefile:
-    1.If the project don't have "LICENSE" in root dir, please define all the license files in this
-project in , OAT will check license files according to this rule.
-
-    policylist:
-    1. policy: If the OAT-Default.xml policies do not meet your requirements, please add policies here.
-    2. policyitem: The fields type, name, path, desc is required, and the fields rule, group,
-filefilter is optional,the default value is:
-    <policyitem type="" name="" path="" desc="" rule="may" group="defaultGroup"
-filefilter="defaultPolicyFilter"/>
-    3. policyitem type:
-        "compatibility" is used to check license compatibility in the specified path;
-        "license" is used to check source license header in the specified path;
-        "copyright" is used to check source copyright header in the specified path;
-        "import" is used to check source dependency in the specified path, such as import ... ,include ...
-        "filetype" is used to check file type in the specified path, supported file types: archive, binary
-        "filename" is used to check whether the specified file exists in the specified path(projectroot
-means the root dir of the project), supported file names: LICENSE, README, README.OpenSource
-    4. policyitem name: This field is used for define the license, copyright, "*" means match all, the
-"!" prefix means could not match this value. For example, "!GPL" means can not use GPL license.
-    5. policyitem path: This field is used for define the source file scope to apply this policyitem,
-the "!" prefix means exclude the files. For example, "!.*/lib/.*" means files in lib dir will be
-exclude while process this policyitem.
-    6. policyitem rule and group: These two fields are used together to merge policy results. "may"
-policyitems in the same group means any one in this group passed, the result will be passed.
-    7. policyitem filefilter: Used to bind filefilter which define filter rules.
-    7. policyitem desc: Used to describe the reason of this policy item, committers will check this
-while merging the code.
-    8. filefilter: Filter rules, the type filename is used to filter file name, the type filepath is
-used to filter file path.
-
-    Note:If the text contains special characters, please escape them according to the following rules:
-    " == &quot;
-    & == &amp;
-    ' == &apos;
-    < == &lt;
-    > == &gt;
--->
-
 <configuration>
     <oatconfig>
         <policylist>
@@ -67,7 +8,6 @@ used to filter file path.
                 <policyitem type="compatibility" name="Hanson" path="radeon.*" desc="" />
                 <policyitem type="compatibility" name="Hanson" path="intel.*" desc="" />
                 <policyitem type="compatibility" name="Nicolai Haehnle" path=".*" desc="" />
-
                 <policyitem type="compatibility" name="Dave Airlie" path=".*" desc="" />
                  <policyitem type="compatibility" name="Micro Devices" path=".*" desc="" />
                  <policyitem type="compatibility" name="Red Hat" path=".*" desc="" />
@@ -79,21 +19,6 @@ used to filter file path.
                    <policyitem type="compatibility" name="Jerome Glisse1" path=".*" desc="" />
                     <policyitem type="compatibility" name="Red Hat Inc" path=".*" desc="" />
                     <policyitem type="compatibility" name="Tungsten Graphic" path=".*" desc="" />
-
-                
-                <!-- <policyitem type="compatibility" name="Khronos License" path=".*" desc="" />
-                <policyitem type="compatibility" name="Apache-2.0" path=".*" desc="" />
-                <policyitem type="compatibility" name="GPLStyleLicense" path=".*" desc="" />
-                <policyitem type="compatibility" name="LLVM License" path="third_party/llvm-subzero.*" desc="" />
-                <policyitem type="compatibility" name="LLVM License" path="third_party/subzero.*" desc="" />
-                <policyitem type="compatibility" name="LLVM License" path="third_party/llvm-10.0.*" desc="" />
-                <policyitem type="compatibility" name="GPL-3.0+" path=".*" desc="" />
-                <policyitem type="compatibility" name="Spencer-94" path=".*" desc="" />
-                <policyitem type="compatibility" name="OpenBSD" path=".*" desc="" />
-                <policyitem type="compatibility" name="original license" path="third_party/llvm-subzero/include/llvm/Support.*" desc="" />
-                <policyitem type="compatibility" name="original license" path="third_party/llvm-10.0/llvm/include/llvm/Support.*" desc="" />
-                <policyitem type="compatibility" name="Khronos License2" path="include.*" desc="" />
-                <policyitem type="compatibility" name="Khronos License3" path="include.*" desc="" /> -->
             </policy>
         </policylist>
         <filefilterlist>
@@ -116,48 +41,16 @@ used to filter file path.
             </filefilter>
         </filefilterlist>
         <licensematcherlist>
-            <!-- <licensematcher name="LLVM License" desc="">
-                <licensetext name="
-                /* This file is distributed under the University of Illinois Open Source      */
-                /* License. See LICENSE.TXT for details.                                      */
-                " desc="" />
-                </licensematcher>
-            <licensematcher name="OpenBSD" desc="">
-                <licensetext name="
-                * This code is derived from OpenBSD's libc, original license follows:
-                *
-                * Copyright (c) 1998 Todd C. Miller &gt;Todd.Miller@courtesan.com&gt;
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="original license" desc="">
-                <licensetext name="
-                * This is an OpenSSL-compatible implementation of the RSA Data Security, Inc.
-                * MD5 Message-Digest Algorithm (RFC 1321).
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="Khronos License2" desc="">
-                <licensetext name="
-                * Copyright (c) 2008-2018 The Khronos Group Inc.
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="Khronos License3" desc="">
-                <licensetext name="
-                * Copyright (c) 2007-2016 The Khronos Group Inc
-            " desc="" />
-            </licensematcher> -->
-
             <licensematcher name="Hanson" desc="">
                 <licensetext name="
                * Copyright (c) 2003-2016, Troy D. Hanson 
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Nicolai Haehnle" desc="">
                 <licensetext name="
                * Copyright © 2008 Nicolai Haehnle 
             " desc="" />
             </licensematcher>
-            
             <licensematcher name="Dave Airlie" desc="">
                 <licensetext name="
                 * Copyright © 2008 Dave Airlie
@@ -186,7 +79,6 @@ used to filter file path.
  * of the Software..
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Micro Devices" desc="">
                 <licensetext name="
                 #  Copyright © 2017 Advanced Micro Devices, Inc.
@@ -211,7 +103,6 @@ used to filter file path.
 #  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Red Hat" desc="">
                 <licensetext name="
                 * Copyright © 2009 Red Hat Inc.
@@ -239,12 +130,10 @@ used to filter file path.
  * of the Software.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Jérôme Glisse" desc="">
                 <licensetext name="
                * Copyright © 2008 Jérôme Glisse
  * All Rights Reserved.
- *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * &quot;Software&quot;), to deal in the Software without restriction, including
@@ -267,44 +156,30 @@ used to filter file path.
  * of the Software.
             " desc="" />
             </licensematcher>
-
-
-
             <licensematcher name="Contributing to libdrm" desc="">
                 <licensetext name="
                Contributing to libdrm
 ======================
-
 Submitting Patches
 ------------------
-
 Patches should be sent to dri-devel@lists.freedesktop.org, using git
 send-email. For patches only touching driver specific code one of the driver
 mailing lists (like amd-gfx@lists.freedesktop.org) is also appropriate. See git
 documentation for help:
-
 http://git-scm.com/documentation
-
 Since dri-devel is a very busy mailing list please use --subject-prefix=&quot;PATCH
 libdrm&quot; to make it easier to find libdrm patches. This is best done by running
-
     git config --local format.subjectprefix &quot;PATCH libdrm&quot;
-
 The first line of a commit message should contain a prefix indicating what part
 is affected by the patch followed by one sentence that describes the change. For
 examples:
-
     amdgpu: Use uint32_t i in amdgpu_find_bo_by_cpu_mapping
-
 The body of the commit message should describe what the patch changes and why,
 and also note any particular side effects. For a recommended reading on
 writing commit messages, see:
-
 http://who-t.blogspot.de/2009/12/on-commit-messages.html 
             " desc="" />
             </licensematcher>
-
-
              <licensematcher name="Adam Jackson" desc="">
                 <licensetext name="
                #  Copyright 2005 Adam Jackson.
@@ -328,7 +203,6 @@ http://who-t.blogspot.de/2009/12/on-commit-messages.html
 #  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
             " desc="" />
             </licensematcher>
-
              <licensematcher name="Red Hat All Rights Reserved" desc="">
                 <licensetext name="
                 * Copyright © 2011 Red Hat All Rights Reserved.
@@ -355,7 +229,6 @@ http://who-t.blogspot.de/2009/12/on-commit-messages.html
  * of the Software 
             " desc="" />
             </licensematcher>
-
              <licensematcher name="Tungsten Graphics" desc="">
                 <licensetext name="
                * Copyright 2007 Tungsten Graphics, Inc., Cedar Park, TX., USA
@@ -382,8 +255,6 @@ http://who-t.blogspot.de/2009/12/on-commit-messages.html
  * of the Software. 
             " desc="" />
             </licensematcher>
-
-
            <licensematcher name="Jerome Glisse1" desc="">
                 <licensetext name="
                 * Copyright 2010 Jerome Glisse &lt;glisse@freedesktop.org>
@@ -408,8 +279,6 @@ http://who-t.blogspot.de/2009/12/on-commit-messages.html
  * USE OR OTHER DEALINGS IN THE SOFTWARE. 
             " desc="" />
             </licensematcher>
-
-
             <licensematcher name="Red Hat Inc" desc="">
                 <licensetext name="
                * Copyright � 2007 Red Hat Inc.
@@ -438,7 +307,6 @@ http://who-t.blogspot.de/2009/12/on-commit-messages.html
  * of the Software. 
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Tungsten Graphic" desc="">
                 <licensetext name="
                 * Copyright 2006 Tungsten Graphics, Inc., Bismarck, ND. USA.
@@ -465,9 +333,6 @@ http://who-t.blogspot.de/2009/12/on-commit-messages.html
  * of the Software.
             " desc="" />
             </licensematcher>
-
-
-
         </licensematcherlist>
     </oatconfig>
 </configuration>
