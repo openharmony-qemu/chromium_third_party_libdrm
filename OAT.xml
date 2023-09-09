@@ -1,336 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <oatconfig>
+    <licensefile>log/License.txt</licensefile>
         <policylist>
             <policy name="projectPolicy" desc="">
-               
-                <policyitem type="compatibility" name="GPL-2.0" path=".*" desc="" />
-                <policyitem type="compatibility" name="Hanson" path="radeon.*" desc="" />
-                <policyitem type="compatibility" name="Hanson" path="intel.*" desc="" />
-                <policyitem type="compatibility" name="Nicolai Haehnle" path=".*" desc="" />
-                <policyitem type="compatibility" name="Dave Airlie" path=".*" desc="" />
-                 <policyitem type="compatibility" name="Micro Devices" path=".*" desc="" />
-                 <policyitem type="compatibility" name="Red Hat" path=".*" desc="" />
-                 <policyitem type="compatibility" name="Jérôme Glisse" path=".*" desc="" />
-                 <policyitem type="compatibility" name="Contributing to libdrm" path=".*" desc="" />
-                 <policyitem type="compatibility" name="Adam Jackson" path=".*" desc="" />
-                 <policyitem type="compatibility" name="Red Hat All Rights Reserved" path=".*" desc="" />
-                  <policyitem type="compatibility" name="Tungsten Graphics" path=".*" desc="" />
-                   <policyitem type="compatibility" name="Jerome Glisse1" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Red Hat Inc" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Tungsten Graphic" path=".*" desc="" />
+                <policyitem type="compatibility" name="SPDX:GPL-2.0 WITH Linux-syscall-note" path=".*" desc="" />
+                <policyitem type="compatibility" name="ICU" path=".*" desc="" />
             </policy>
         </policylist>
         <filefilterlist>
             <filefilter name="defaultPolicyFilter"
                 desc="Filters for compatibility,license header policies">
-                <filteritem type="filepath" name="third_party/llvm-10.0/llvm/include/llvm/Support/LICENSE.TXT"
+                <filteritem type="filepath" name=".*rst"
                     desc="" />
-                <filteritem type="filepath" name="third_party/SPIRV-Tools/BUILD.bazel"
-                    desc="" />
-                <filteritem type="filepath" name="third_party/llvm-subzero/LICENSE.TXT"
-                    desc="" />
-                <filteritem type="filepath" name="third_party/subzero/LICENSE.TXT"
-                    desc="" />
-                <filteritem type="filepath" name="third_party/subzero/bloat/README.chromium"
-                    desc="" />
-                <filteritem type="filepath" name="third_party/llvm-10.0/Android.bp"
-                    desc="" />
-                <filteritem type="filepath" name="third_party/SPIRV-Headers/BUILD.bazel"
+                <filteritem type="filepath" name="README.OpenSource"
                     desc="" />
             </filefilter>
+            <filefilter name="defaultFilter">
+                <filteritem type="filepath" name="README.OpenSource"
+                    desc="" />
+                <filteritem type="filepath" name=".*3d.batch"
+                    desc="" />
+                <filteritem type="filepath" name="tests/ttmtest/AUTHORS"
+                    desc="" />
+                <filteritem type="filepath" name="tests/ttmtest/ChangeLog"
+                    desc="" />
+                <filteritem type="filepath" name="intel/tests/gen7-2d-copy.batch"
+                    desc="" />
+            </filefilter> 
         </filefilterlist>
         <licensematcherlist>
-            <licensematcher name="Hanson" desc="">
+            <licensematcher name="MIT" desc="">
                 <licensetext name="
-               * Copyright (c) 2003-2016, Troy D. Hanson 
+                All Rights Reserved.
+                *
+                * Permission is hereby granted, free of charge, to any person obtaining
+                * a copy of this software and associated documentation files (the
+                * &quot;Software&quot;), to deal in the Software without restriction, including
+                * without limitation the rights to use, copy, modify, merge, publish,
+                * distribute, sub license, and/or sell copies of the Software, and to
+                * permit persons to whom the Software is furnished to do so, subject to
+                * the following conditions:
+                *
+                * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+                * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+                * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+                * NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS, AUTHORS
+                * AND/OR ITS SUPPLIERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+                * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+                * USE OR OTHER DEALINGS IN THE SOFTWARE.
+                *
+                * The above copyright notice and this permission notice (including the
+                * next paragraph) shall be included in all copies or substantial portions
+                * of the Software.
+            " desc="" />
+             </licensematcher>
+             <licensematcher name="ICU" desc="">
+                <licensetext name="
+                Permission is hereby granted, free of charge, to any person obtaining a
+                #  copy of this software and associated documentation files (the &quot;Software&quot;),
+                #  to deal in the Software without restriction, including without limitation
+                #  on the rights to use, copy, modify, merge, publish, distribute, sub
+                #  license, and/or sell copies of the Software, and to permit persons to whom
+                #  the Software is furnished to do so, subject to the following conditions
             " desc="" />
             </licensematcher>
-            <licensematcher name="Nicolai Haehnle" desc="">
+            <licensematcher name="ICU" desc="">
                 <licensetext name="
-               * Copyright © 2008 Nicolai Haehnle 
+                * Permission is hereby granted, free of charge, to any person obtaining
+                * a copy of this software and associated documentation files (the
+                * &quot;Software&quot;), to deal in the Software without restriction, including
+                * without limitation the rights to use, copy, modify, merge, publish,
+                * distribute, sub license, and/or sell copies of the Software, and to
+                * permit persons to whom the Software is furnished to do so, subject to
+                * the following conditions:
             " desc="" />
             </licensematcher>
-            <licensematcher name="Dave Airlie" desc="">
+            <licensematcher name="BSD-2-Clause without Warranty Disclaimer with Unmodified requirement" desc="">
                 <licensetext name="
-                * Copyright © 2008 Dave Airlie
- * Copyright © 2008 Jérôme Glisse
- * All Rights Reserved.
- *
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * &quot;Software&quot;), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sub license, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- *
- * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS, AUTHORS
- * AND/OR ITS SUPPLIERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * The above copyright notice and this permission notice (including the
- * next paragraph) shall be included in all copies or substantial portions
- * of the Software..
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="Micro Devices" desc="">
-                <licensetext name="
-                #  Copyright © 2017 Advanced Micro Devices, Inc.
-                #  All Rights Reserved.
-#
-#  Permission is hereby granted, free of charge, to any person obtaining a
-#  copy of this software and associated documentation files (the &quot;Software&quot;),
-#  to deal in the Software without restriction, including without limitation
-#  on the rights to use, copy, modify, merge, publish, distribute, sub
-#  license, and/or sell copies of the Software, and to permit persons to whom
-#  the Software is furnished to do so, subject to the following conditions:
-#
-#  The above copyright notice and this permission notice (including the next
-#  paragraph) shall be included in all copies or substantial portions of the
-#  Software.
-#
-#  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-#  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-#  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL
-#  ADAM JACKSON BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-#  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-#  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="Red Hat" desc="">
-                <licensetext name="
-                * Copyright © 2009 Red Hat Inc.
- * All Rights Reserved.
- *
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * &quot;Software&quot;), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sub license, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- *
- * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS, AUTHORS
- * AND/OR ITS SUPPLIERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * The above copyright notice and this permission notice (including the
- * next paragraph) shall be included in all copies or substantial portions
- * of the Software.
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="Jérôme Glisse" desc="">
-                <licensetext name="
-               * Copyright © 2008 Jérôme Glisse
- * All Rights Reserved.
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * &quot;Software&quot;), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sub license, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- *
- * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS, AUTHORS
- * AND/OR ITS SUPPLIERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * The above copyright notice and this permission notice (including the
- * next paragraph) shall be included in all copies or substantial portions
- * of the Software.
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="Contributing to libdrm" desc="">
-                <licensetext name="
-               Contributing to libdrm
-======================
-Submitting Patches
-------------------
-Patches should be sent to dri-devel@lists.freedesktop.org, using git
-send-email. For patches only touching driver specific code one of the driver
-mailing lists (like amd-gfx@lists.freedesktop.org) is also appropriate. See git
-documentation for help:
-http://git-scm.com/documentation
-Since dri-devel is a very busy mailing list please use --subject-prefix=&quot;PATCH
-libdrm&quot; to make it easier to find libdrm patches. This is best done by running
-    git config --local format.subjectprefix &quot;PATCH libdrm&quot;
-The first line of a commit message should contain a prefix indicating what part
-is affected by the patch followed by one sentence that describes the change. For
-examples:
-    amdgpu: Use uint32_t i in amdgpu_find_bo_by_cpu_mapping
-The body of the commit message should describe what the patch changes and why,
-and also note any particular side effects. For a recommended reading on
-writing commit messages, see:
-http://who-t.blogspot.de/2009/12/on-commit-messages.html 
-            " desc="" />
-            </licensematcher>
-             <licensematcher name="Adam Jackson" desc="">
-                <licensetext name="
-               #  Copyright 2005 Adam Jackson.
-#
-#  Permission is hereby granted, free of charge, to any person obtaining a
-#  copy of this software and associated documentation files (the &quot;Software&quot;),
-#  to deal in the Software without restriction, including without limitation
-#  on the rights to use, copy, modify, merge, publish, distribute, sub
-#  license, and/or sell copies of the Software, and to permit persons to whom
-#  the Software is furnished to do so, subject to the following conditions:
-#
-#  The above copyright notice and this permission notice (including the next
-#  paragraph) shall be included in all copies or substantial portions of the
-#  Software.
-#
-#  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-#  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-#  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL
-#  ADAM JACKSON BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-#  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-#  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
-            " desc="" />
-            </licensematcher>
-             <licensematcher name="Red Hat All Rights Reserved" desc="">
-                <licensetext name="
-                * Copyright © 2011 Red Hat All Rights Reserved.
- *
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * &quot;Software&quot;), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sub license, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- *
- * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS, AUTHORS
- * AND/OR ITS SUPPLIERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * The above copyright notice and this permission notice (including the
- * next paragraph) shall be included in all copies or substantial portions
- * of the Software 
-            " desc="" />
-            </licensematcher>
-             <licensematcher name="Tungsten Graphics" desc="">
-                <licensetext name="
-               * Copyright 2007 Tungsten Graphics, Inc., Cedar Park, TX., USA
- * All Rights Reserved.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the
- * &quot;Software&quot;), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sub license, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
- * THE COPYRIGHT HOLDERS, AUTHORS AND/OR ITS SUPPLIERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR 
- * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE 
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * The above copyright notice and this permission notice (including the
- * next paragraph) shall be included in all copies or substantial portions
- * of the Software. 
-            " desc="" />
-            </licensematcher>
-           <licensematcher name="Jerome Glisse1" desc="">
-                <licensetext name="
-                * Copyright 2010 Jerome Glisse &lt;glisse@freedesktop.org>
- *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the &quot;Software&quot;),
- * to deal in the Software without restriction, including without limitation
- * on the rights to use, copy, modify, merge, publish, distribute, sub
- * license, and/or sell copies of the Software, and to permit persons to whom
- * the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice (including the next
- * paragraph) shall be included in all copies or substantial portions of the
- * Software.
- *
- * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
- * THE AUTHOR(S) AND/OR THEIR SUPPLIERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
- * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE. 
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="Red Hat Inc" desc="">
-                <licensetext name="
-               * Copyright � 2007 Red Hat Inc.
- * Copyright � 2007-2012 Intel Corporation
- * Copyright 2006 Tungsten Graphics, Inc., Bismarck, ND., USA
- * All Rights Reserved.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the
- * &quot;Software&quot;), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sub license, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- *
- * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
- * THE COPYRIGHT HOLDERS, AUTHORS AND/OR ITS SUPPLIERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
- * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * The above copyright notice and this permission notice (including the
- * next paragraph) shall be included in all copies or substantial portions
- * of the Software. 
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="Tungsten Graphic" desc="">
-                <licensetext name="
-                * Copyright 2006 Tungsten Graphics, Inc., Bismarck, ND. USA.
- * All Rights Reserved.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the
- * &quot;Software&quot;), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sub license, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- *
- * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
- * THE COPYRIGHT HOLDERS, AUTHORS AND/OR ITS SUPPLIERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
- * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * The above copyright notice and this permission notice (including the
- * next paragraph) shall be included in all copies or substantial portions
- * of the Software.
+                Redistribution and use in source and binary forms, with or without
+                modification, are permitted provided that the following conditions are met
             " desc="" />
             </licensematcher>
         </licensematcherlist>

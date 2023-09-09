@@ -1,7 +1,7 @@
 [
     {
         "Name": "chromium_third_party_libdrm",                   # 上游开源软件名全称
-        "License": "GPL-2.0","Hanson" ,"Nicolai Haehnle","Dave Airlie","Micro Devices","Red Hat","Jérôme Glisse","Contributing to libdrm","Adam Jackson" ,"Red Hat All Rights Reserved","Tungsten Graphics","Jerome Glisse1","Red Hat Inc","Tungsten Graphic"       # 上游开源软件中包含的许可证信息
+        "License":"SPDX:GPL-2.0 WITH Linux-syscall-note" ,"ICU","MIT","BSD-2-Clause without Warranty Disclaimer with Unmodified requirement"    # 上游开源软件中包含的许可证信息
         "License File": "log/License.txt",        # 许可证所在文件路径
         "Version Number": "0190f49a139e7069d7cad6a6890832831da1aa8b",
         "Upstream URL": "https://chromium.googlesource.com/chromiumos/third_party/libdrm.git@0190f49a139e7069d7cad6a6890832831da1aa8b",   # 上游软件包发布地址
