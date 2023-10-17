@@ -6,6 +6,15 @@
         "Version Number": "0190f49a139e7069d7cad6a6890832831da1aa8b",
         "Owner": "huangjiewen2@huawei.com",
         "Upstream URL": "https://chromium.googlesource.com/chromiumos/third_party/libdrm.git@0190f49a139e7069d7cad6a6890832831da1aa8b",
+        "Descript,ion": "第三方软件libdrm"
+    }
+    {
+        "Name": "libdrm",
+        "License":"BSD-3-Clause",
+        "License File": "LICENSE",
+        "Version Number": "0190f49a139e7069d7cad6a6890832831da1aa8b",
+        "Owner": "huangjiewen2@huawei.com",
+        "Upstream URL": "https://chromium.googlesource.com/chromiumos/third_party/libdrm.git@0190f49a139e7069d7cad6a6890832831da1aa8b",
         "Description": "第三方软件libdrm"
     }
 ]
