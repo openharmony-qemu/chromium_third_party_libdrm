@@ -95,7 +95,6 @@ used to filter file path.
                 <filteritem type="filename" name="*.pdf" desc="chromium原生二进制文件,不会使用"/>
                 <filteritem type="filename" name="*.avif" desc="chromium原生二进制文件,不会使用"/>
                 <filteritem type="filename" name="*.batch" desc="chromium原生二进制文件,不会使用"/>
-                <filteritem type="filepath" name="README.OpenSource" desc="chromium原生二进制文件,不会使用"/>
                 <filteritem type="filepath" name="tests/ttmtest/AUTHORS" desc="chromium原生二进制文件,不会使用"/>
                 <filteritem type="filepath" name="tests/ttmtest/ChangeLog" desc="chromium原生二进制文件,不会使用"/>
                 <filteritem type="filepath" name="chromium_third_party_grpc/chromium_third_party_libavif/tests/data/cosmos1650_yuv444_10bpc_p3pq.y4m" desc="chromium原生二进制文件,不会使用"/>
