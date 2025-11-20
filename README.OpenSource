@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "libdrm",
+        "License":"Public Domain",
+        "License File": "LICENSE",
+        "Version Number": "ad78bb591d02162d3b90890aa4d0a238b2a37cde",
+        "Owner": "huamengzheng@huawei.com",
+        "Upstream URL": "https://chromium.googlesource.com/chromiumos/third_party/libdrm.git@ad78bb591d02162d3b90890aa4d0a238b2a37cde",
+        "Descript,ion": "第三方软件libdrm，libdrm基于DRI协议通过ioctl与2D图显驱动进行交互，配置图显处理器以及HDMI、MIPI、LVDS等编解码单元"
+    }
+]
